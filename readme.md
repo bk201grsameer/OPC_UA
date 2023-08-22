@@ -16,7 +16,7 @@ In this project, we establish a connection to an OPC UA server, read the tempera
 
 ## Installation
 
-1. Ensure you have Node.js and npm (Node Package Manager) installed on your system.
+1. Ensure you have [Node.js](https://nodejs.org/) and npm (Node Package Manager) installed on your system.
 2. Clone this repository or download the source code.
 3. Open a terminal and navigate to the project directory.
 4. Install the required dependencies using the command: `npm install`
@@ -29,23 +29,23 @@ In this project, we establish a connection to an OPC UA server, read the tempera
 
 ## About OPC UA
 
-OPC UA (Open Platform Communications Unified Architecture) is a communication protocol and framework that allows secure and reliable data exchange between industrial devices, systems, and software applications. It's widely used in industrial automation, manufacturing, and other industries for establishing standardized communication between various components of a system.
+OPC UA ([Open Platform Communications Unified Architecture](https://opcfoundation.org/about/opc-technologies/opc-ua/)) is a communication protocol and framework that allows secure and reliable data exchange between industrial devices, systems, and software applications. It's widely used in industrial automation, manufacturing, and other industries for establishing standardized communication between various components of a system.
 
 ## How It Works
 
-1. The program establishes a connection to an OPC UA server using the `node-opcua` library.
+1. The program establishes a connection to an OPC UA server using the [`node-opcua`](https://github.com/node-opcua/node-opcua) library.
 2. A user provides their OPC UA server credentials (username and password) for authentication.
 3. Upon successful authentication, the program creates an OPC UA session for communication.
 4. The program continuously fetches the temperature data from a specific node on the OPC UA server at regular intervals.
-5. The fetched temperature data is sent to the connected web clients using WebSockets through the `socket.io` library.
+5. The fetched temperature data is sent to the connected web clients using WebSockets through the [`socket.io`](https://socket.io/) library.
 6. The web client, which is an HTML page using the EJS templating engine, displays the live temperature data in real-time.
 
 ## Dependencies
 
-- `express`: A web application framework for Node.js used to create the HTTP server.
-- `node-opcua`: A library for OPC UA communication.
-- `socket.io`: A library for implementing WebSockets and real-time communication.
-- `ejs`: A template engine for generating HTML with dynamic content.
+- [`express`](https://expressjs.com/): A web application framework for Node.js used to create the HTTP server.
+- [`node-opcua`](https://github.com/node-opcua/node-opcua): A library for OPC UA communication.
+- [`socket.io`](https://socket.io/): A library for implementing WebSockets and real-time communication.
+- [`ejs`](https://ejs.co/): A template engine for generating HTML with dynamic content.
 
 ## Author
 
@@ -57,6 +57,4 @@ This project is licensed under the [MIT License](LICENSE).
 
 ---
 
-Feel free to replace `[Your Name]` in the Author section with your actual name or username.
-
-Please note that while this README provides a comprehensive overview of the project, it's always a good idea to customize it further based on your specific project details and intended audience.
+Feel free to replace `[Your Name]` in the Author section with your actual name or username. You can also customize the links to other relevant resources or documentation as needed.
