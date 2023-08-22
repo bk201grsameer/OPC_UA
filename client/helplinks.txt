@@ -1,0 +1,1 @@
+https://stackoverflow.com/questions/75056713/connect-to-opcua-server-with-username-and-password
