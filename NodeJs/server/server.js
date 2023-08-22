@@ -2,10 +2,23 @@ const express = require('express');
 const http = require('http');
 const socketIO = require('socket.io');
 const { OPCUAClient, UserTokenType } = require('node-opcua');
+const path = require('path');
+const morgan = require('morgan');
 
 const app = express();
 const server = http.createServer(app);
 const io = socketIO(server);
+
+
+// Set the view engine to EJS
+app.set('view engine', 'ejs');
+// Morgan logging middleware
+app.use(morgan('dev'));
+// Body parsing middleware
+app.use(express.urlencoded({ extended: true }));
+app.use(express.static(path.join(__dirname, "public")));
+app.use(express.json());
+
 
 const url = 'opc.tcp://Sameer:53530/OPCUA/SimulationServer';
 const username = 'test'; // Change this to your username
@@ -50,7 +63,7 @@ const startFetchingData = (session) => {
 };
 
 app.get('/', (req, res) => {
-    res.sendFile(__dirname + '/index.html');
+    res.render('index');
 });
 
 io.on('connection', (socket) => {
